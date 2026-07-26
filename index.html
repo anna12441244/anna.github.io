@@ -311,7 +311,8 @@
     .contact-links {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      align-items: center;
+      gap: 1.8rem;
       margin-top: 2rem;
       flex-wrap: wrap;
     }
@@ -327,6 +328,27 @@
     }
 
     .contact-links a:hover { color: var(--accent); }
+
+    /* Social Icon Button Styling */
+    .social-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: var(--accent) !important;
+      font-size: 1.3rem;
+      transition: transform 0.3s, background 0.3s, border-color 0.3s !important;
+    }
+
+    .social-icon-btn:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
 
     footer {
       text-align: center;
@@ -348,6 +370,7 @@
       }
       .hero-content h1 { font-size: 2.2rem; }
       .nav-links { display: none; }
+      .contact-links { gap: 1.2rem; }
     }
   </style>
 </head>
@@ -371,7 +394,6 @@
   <section class="hero" id="home">
     <div class="hero-container">
       <div class="profile-photo-container">
-        <!-- Photo placeholder: Named profile.jpg -->
         <img src="profile.jpg" alt="Anna John" class="profile-photo" onerror="this.src='https://via.placeholder.com/240?text=Anna+John';">
       </div>
       <div class="hero-content">
@@ -546,12 +568,21 @@
   <!-- Contact -->
   <section id="contact">
     <div class="contact-box">
-      <h2>Get In Touch</h2>
+      2 Get In Touch</h2>
       <p>Feel free to reach out for collaborations or opportunities!</p>
       
       <div class="contact-links">
         <a href="mailto:aj768125@gmail.com"><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> aj768125@gmail.com</a>
         <a href="tel:+919207208140"><i class="fa-solid fa-phone" style="color: var(--accent);"></i> +91 9207208140</a>
+        
+        <!-- Social Media Icons Only -->
+        <a href="https://github.com/anna12441244" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/anna-john-83bb04306" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
         <span><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Kochi, India</span>
       </div>
     </div>
